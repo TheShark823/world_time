@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class ChooseLocation extends StatefulWidget {
@@ -8,6 +10,23 @@ class ChooseLocation extends StatefulWidget {
 }
 
 class _ChooseLocationState extends State<ChooseLocation> {
+  void getData() async {
+    //similate a network request for a username
+    await Future.delayed(Duration(seconds: 3), () {
+      print("coule");
+    });
+
+    Future.delayed(Duration(seconds: 2), () {
+      print("coule mbombo muana mboka");
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getData();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
